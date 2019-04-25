@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  OurAdventury
+//  OurAdventure
 //
 //  Created by student on 25/04/19.
 //  Copyright © 2019 student. All rights reserved.
