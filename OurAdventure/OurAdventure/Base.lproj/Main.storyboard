@@ -155,6 +155,9 @@
                                 <date key="date" timeIntervalSinceReferenceDate="578081819.16102004">
                                     <!--2019-04-27 18:16:59 +0000-->
                                 </date>
+                                <connections>
+                                    <action selector="datePickerChanged:" destination="ea3-8P-T4j" eventType="valueChanged" id="8Js-gA-Xjp"/>
+                                </connections>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0l5-0O-4LJ">
                                 <rect key="frame" x="143" y="573" width="88" height="30"/>
@@ -188,6 +191,12 @@
                             <constraint firstAttribute="trailingMargin" secondItem="1Qc-iA-mag" secondAttribute="trailing" constant="5" id="y61-bB-axy"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="DatesDatePicker" destination="uvL-hc-M5B" id="oiW-dm-cql"/>
+                        <outlet property="DescriptionUITextField" destination="3IG-Ls-qtk" id="yBd-Ti-HMO"/>
+                        <outlet property="EventNameUITextFiel" destination="vUV-jG-kMM" id="rRb-JY-lIk"/>
+                        <outlet property="LocationUITextField" destination="1Qc-iA-mag" id="aMa-gv-if9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0PM-lI-Ewd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -10,6 +10,21 @@ import UIKit
 
 class ViewControllerCreateEvent: UIViewController {
 
+    @IBOutlet weak var EventNameUITextFiel: UITextField!
+    @IBOutlet weak var LocationUITextField: UITextField!
+    @IBOutlet weak var DescriptionUITextField: UITextField!
+    @IBOutlet weak var DatesDatePicker: UIDatePicker!
+    
+    
+    @IBAction func datePickerChanged(_ sender: Any) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = DateFormatter.Style.short
+        dateFormatter.timeStyle = DateFormatter.Style.short
+        //strDate é uma constante com a data e horario informado
+        let strDate = dateFormatter.string(from: DatesDatePicker.date)
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
