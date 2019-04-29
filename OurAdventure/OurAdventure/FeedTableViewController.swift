@@ -13,7 +13,7 @@ class FeedTableViewController: UITableViewController {
     var events = [Event]()
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Events"
+        self.title = "Feed"
         self.events = EventDAO.getEvent()
         
         // Uncomment the following line to preserve selection between presentations
@@ -101,5 +101,14 @@ class FeedTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "feedToEventSegue"{
+            if let newEvent = segue.destination as? EventScreenViewController{
+                let IndexPath = self.tableView.indexPathForSelectedRow
+                let current = events[(IndexPath?.row)!]
+                newEvent.package = current
+            }
+        }
+    }
 
 }

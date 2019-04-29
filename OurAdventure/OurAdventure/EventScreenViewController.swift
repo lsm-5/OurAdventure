@@ -8,11 +8,27 @@
 
 import UIKit
 
-class EventScreenViewController: UIViewController {
 
+class EventScreenViewController: UIViewController {
+    
+    @IBOutlet weak var pictureImageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var descriptionTextView: UITextView!
+    @IBOutlet weak var timeLabel: UILabel!
+
+    var package: Event?
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.title = "Event"
+        self.pictureImageView.image = UIImage(named: (self.package?.picture)!)
+        self.nameLabel.text = self.package?.name
+        self.locationLabel.text = self.package?.location
+        self.dateLabel.text = self.package?.date
+        self.descriptionTextView.text = self.package?.description
+        self.timeLabel.text = self.package?.time
+        
         // Do any additional setup after loading the view.
     }
 
