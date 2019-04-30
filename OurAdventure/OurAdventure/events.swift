@@ -39,3 +39,13 @@ class EventDAO{
     }
     
 }
+
+class userEventDAO{
+    
+    static func getEvent() -> [Event]{
+        return [
+            Event(name:"Limpar a praia", location: "Av. Boa Viagem, Boa Viagem", description:"Limpar a praia de Boa Viagem, ela está toda cagada, passou um monte de chines e cunegudeses comederes de ketchup. Vamos manter a praia limpa, jogando o lixo no saquinho!", time:"8:00 a.m.", date:"30/04", picture:"praiaBV", score:0),
+        ]
+    }
+    
+}

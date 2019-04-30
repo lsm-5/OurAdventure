@@ -14,6 +14,8 @@
 		3F240FC822726AF600C16E97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F240FC622726AF600C16E97 /* LaunchScreen.storyboard */; };
 		3F6689CA2274D592001042E2 /* ViewControllerMapa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6689C92274D592001042E2 /* ViewControllerMapa.swift */; };
 		3F6689CC2274D5BB001042E2 /* ViewControllerCreateEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6689CB2274D5BB001042E2 /* ViewControllerCreateEvent.swift */; };
+		3FB4287722790987002C1327 /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB4287522790987002C1327 /* ProfileTableViewCell.swift */; };
+		3FB4287822790987002C1327 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB4287622790987002C1327 /* ProfileTableViewController.swift */; };
 		3FE3A2CF2274E443008A7995 /* events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE3A2CB2274E443008A7995 /* events.swift */; };
 		3FE3A2D02274E443008A7995 /* EventScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE3A2CC2274E443008A7995 /* EventScreenViewController.swift */; };
 		3FE3A2D12274E443008A7995 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE3A2CD2274E443008A7995 /* FeedTableViewCell.swift */; };
@@ -30,6 +32,8 @@
 		3F240FC922726AF600C16E97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F6689C92274D592001042E2 /* ViewControllerMapa.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerMapa.swift; sourceTree = "<group>"; };
 		3F6689CB2274D5BB001042E2 /* ViewControllerCreateEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerCreateEvent.swift; sourceTree = "<group>"; };
+		3FB4287522790987002C1327 /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
+		3FB4287622790987002C1327 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 		3FE3A2CB2274E443008A7995 /* events.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = events.swift; sourceTree = "<group>"; };
 		3FE3A2CC2274E443008A7995 /* EventScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventScreenViewController.swift; sourceTree = "<group>"; };
 		3FE3A2CD2274E443008A7995 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
@@ -69,6 +73,8 @@
 				3F240FBD22726AF600C16E97 /* AppDelegate.swift */,
 				3F240FBF22726AF600C16E97 /* ViewController.swift */,
 				3F240FC122726AF600C16E97 /* Main.storyboard */,
+				3FB4287522790987002C1327 /* ProfileTableViewCell.swift */,
+				3FB4287622790987002C1327 /* ProfileTableViewController.swift */,
 				3FE3A2CB2274E443008A7995 /* events.swift */,
 				3FE3A2CC2274E443008A7995 /* EventScreenViewController.swift */,
 				3FE3A2CD2274E443008A7995 /* FeedTableViewCell.swift */,
@@ -157,8 +163,10 @@
 				3F6689CA2274D592001042E2 /* ViewControllerMapa.swift in Sources */,
 				3FE3A2D02274E443008A7995 /* EventScreenViewController.swift in Sources */,
 				3FE3A2D12274E443008A7995 /* FeedTableViewCell.swift in Sources */,
+				3FB4287722790987002C1327 /* ProfileTableViewCell.swift in Sources */,
 				3FE3A2D22274E443008A7995 /* FeedTableViewController.swift in Sources */,
 				3F240FC022726AF600C16E97 /* ViewController.swift in Sources */,
+				3FB4287822790987002C1327 /* ProfileTableViewController.swift in Sources */,
 				3F240FBE22726AF600C16E97 /* AppDelegate.swift in Sources */,
 				3F6689CC2274D5BB001042E2 /* ViewControllerCreateEvent.swift in Sources */,
 				3FE3A2CF2274E443008A7995 /* events.swift in Sources */,
