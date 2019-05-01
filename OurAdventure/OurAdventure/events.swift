@@ -35,17 +35,19 @@ class EventDAO{
     static func getEvent() -> [Event]{
         return [
             Event(name:"Limpar a praia", location: "Av. Boa Viagem, Boa Viagem", description:"Limpar a praia de Boa Viagem, ela está toda cagada, passou um monte de chines e cunegudeses comederes de ketchup. Vamos manter a praia limpa, jogando o lixo no saquinho!", time:"8:00 a.m.", date:"30/04", picture:"praiaBV", score:0),
+            Event(name:"Caminhada no Ibura", location: "Ladeira da Cohab, Ibura", description:"Caminhada em favor do desarmamento de gangues criminosas. Vamos acabar com o tráfico!!!", time:"11:00 p.m.", date:"01/05", picture:"ibura", score:0),
         ]
     }
     
 }
 
 class userEventDAO{
-    
     static func getEvent() -> [Event]{
-        return [
+        let events: [Event] = [
             Event(name:"Limpar a praia", location: "Av. Boa Viagem, Boa Viagem", description:"Limpar a praia de Boa Viagem, ela está toda cagada, passou um monte de chines e cunegudeses comederes de ketchup. Vamos manter a praia limpa, jogando o lixo no saquinho!", time:"8:00 a.m.", date:"30/04", picture:"praiaBV", score:0),
-        ]
+            ]
+        return events
     }
+    var events: [Event] = userEventDAO.getEvent()
     
 }
