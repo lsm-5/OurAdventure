@@ -63,6 +63,40 @@
             </objects>
             <point key="canvasLocation" x="-498.39999999999998" y="2201.649175412294"/>
         </scene>
+        <!--Bot View Controller-->
+        <scene sceneID="1DN-KI-N6d">
+            <objects>
+                <viewController id="hV5-Wq-1pi" customClass="BotViewController" customModule="OurAdventure" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="48k-px-3HD"/>
+                        <viewControllerLayoutGuide type="bottom" id="152-vP-r5f"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iZG-Ub-hHT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UL9-a7-1Ai">
+                                <rect key="frame" x="16" y="64" width="343" height="554"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="UL9-a7-1Ai" firstAttribute="top" secondItem="48k-px-3HD" secondAttribute="bottom" id="MFP-uk-v3c"/>
+                            <constraint firstItem="UL9-a7-1Ai" firstAttribute="trailing" secondItem="iZG-Ub-hHT" secondAttribute="trailingMargin" id="dF7-TE-PF3"/>
+                            <constraint firstItem="152-vP-r5f" firstAttribute="top" secondItem="UL9-a7-1Ai" secondAttribute="bottom" id="hyn-80-AUI"/>
+                            <constraint firstItem="UL9-a7-1Ai" firstAttribute="leading" secondItem="iZG-Ub-hHT" secondAttribute="leadingMargin" id="uNH-tQ-L6Q"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="i6z-ST-mmI"/>
+                    <connections>
+                        <outlet property="botWebView" destination="UL9-a7-1Ai" id="0up-kw-Lwy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pMK-o1-hvZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-823.20000000000005" y="1088.9055472263869"/>
+        </scene>
         <!--View Controller Mapa-->
         <scene sceneID="Kdl-mZ-asI">
             <objects>
@@ -247,11 +281,12 @@
                         <segue destination="Uvf-Ga-X0W" kind="relationship" relationship="viewControllers" id="lEz-yh-zyb"/>
                         <segue destination="IAw-OJ-kaZ" kind="relationship" relationship="viewControllers" id="o5j-jD-Y6d"/>
                         <segue destination="Ifo-o2-YrG" kind="relationship" relationship="viewControllers" id="VCJ-uN-iR8"/>
+                        <segue destination="WAz-25-wNj" kind="relationship" relationship="viewControllers" id="5C8-Nd-k2e"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cin-Nq-EYW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-497" y="447"/>
+            <point key="canvasLocation" x="420" y="481.70914542728639"/>
         </scene>
         <!--Feed Table View Controller-->
         <scene sceneID="u4y-Hg-RUI">
@@ -357,7 +392,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aGt-U0-ntX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1644" y="612.14392803598207"/>
+            <point key="canvasLocation" x="2583.1999999999998" y="612.14392803598207"/>
         </scene>
         <!--Event Screen View Controller-->
         <scene sceneID="G5D-g4-QRS">
@@ -512,7 +547,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Yu-kP-DGU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2613.5999999999999" y="611.24437781109452"/>
+            <point key="canvasLocation" x="3552.8000000000002" y="611.24437781109452"/>
         </scene>
         <!--Mapa-->
         <scene sceneID="RFA-we-KUh">
@@ -550,7 +585,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CbK-DD-rlC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="706" y="1489"/>
+            <point key="canvasLocation" x="1644" y="1488.305847076462"/>
         </scene>
         <!--Profile Table View Controller-->
         <scene sceneID="0JF-9e-bl4">
@@ -688,7 +723,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qKN-PC-Bel" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1644" y="1488.305847076462"/>
+            <point key="canvasLocation" x="2583.1999999999998" y="1488.305847076462"/>
         </scene>
         <!--Configuração-->
         <scene sceneID="vU3-9o-Kxb">
@@ -707,7 +742,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="geB-iU-dOf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-498" y="1490"/>
+            <point key="canvasLocation" x="440.80000000000001" y="1489.2053973013494"/>
         </scene>
         <!--Feed-->
         <scene sceneID="QTg-FP-cxt">
@@ -726,7 +761,26 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OEh-4n-0Fz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="704.79999999999995" y="612.14392803598207"/>
+            <point key="canvasLocation" x="1644" y="612.14392803598207"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="2Ie-EX-E8W">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WAz-25-wNj" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="WBB-l3-KgT"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0jM-0x-idd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="hV5-Wq-1pi" kind="relationship" relationship="rootViewController" id="lxX-tC-sdt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DGU-Qt-Xez" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1762.4000000000001" y="1088.9055472263869"/>
         </scene>
     </scenes>
     <resources>
