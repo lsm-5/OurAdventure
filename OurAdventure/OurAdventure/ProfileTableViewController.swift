@@ -8,6 +8,10 @@
 
 import UIKit
 
+extension NSNotification.Name {
+    static let didUpdateName = NSNotification.Name(rawValue: "didUpdateName")
+}
+
 class ProfileTableViewController: UITableViewController {
 
 
@@ -15,20 +19,34 @@ class ProfileTableViewController: UITableViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var bioTextView: UITextView!
     
+    var name: String?
     var events = [Event]()
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.events = userEventDAO.getEvent()
         pictureImageView.image = UIImage(named: "neto")
-        nameLabel.text = "Bixo-pau"
-        bioTextView.text = "Eu gosto muito de ser fino"
+        nameLabel.text = self.name
+        bioTextView.text = "Eu gosto muito de fazer nada"
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(getName(_:)), name: .didUpdateName, object: nil)
+    }
+    
+    @objc func getName(_ notification: NSNotification) {
+        if let userInfo = notification.userInfo,
+            let newName = userInfo["name"] as? String {
+            DispatchQueue.main.async {
+                self.nameLabel.text = newName
+                self.name = newName
+                
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {

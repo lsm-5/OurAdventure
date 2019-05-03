@@ -14,6 +14,22 @@ class ViewControllerCreateEvent: UIViewController {
     @IBOutlet weak var LocationUITextField: UITextField!
     @IBOutlet weak var DescriptionUITextField: UITextField!
     @IBOutlet weak var DatesDatePicker: UIDatePicker!
+    var date = ""
+    
+    @IBAction func CriandoEvento(_ sender: Any) {
+        let nome = EventNameUITextFiel.text
+        let descricao = DescriptionUITextField.text
+        let data = date
+        let localizacao = LocationUITextField.text
+        /*
+        var evento: Event
+        evento.name = nome
+        evento.description = descricao
+        evento.data = date
+        evento.location = localizacao
+        */
+        
+    }
     
     
     @IBAction func datePickerChanged(_ sender: Any) {
@@ -22,6 +38,7 @@ class ViewControllerCreateEvent: UIViewController {
         dateFormatter.timeStyle = DateFormatter.Style.short
         //strDate é uma constante com a data e horario informado
         let strDate = dateFormatter.string(from: DatesDatePicker.date)
+        date = strDate
     }
     
     

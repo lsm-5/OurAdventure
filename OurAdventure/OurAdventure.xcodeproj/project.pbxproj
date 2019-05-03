@@ -12,6 +12,8 @@
 		3F240FC322726AF600C16E97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F240FC122726AF600C16E97 /* Main.storyboard */; };
 		3F240FC522726AF600C16E97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F240FC422726AF600C16E97 /* Assets.xcassets */; };
 		3F240FC822726AF600C16E97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F240FC622726AF600C16E97 /* LaunchScreen.storyboard */; };
+		3F4EF0F5227BB88700F9F0F2 /* ConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4EF0F4227BB88700F9F0F2 /* ConfigViewController.swift */; };
+		3F4EF0F7227BB9E000F9F0F2 /* userInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4EF0F6227BB9E000F9F0F2 /* userInfo.swift */; };
 		3F6689CA2274D592001042E2 /* ViewControllerMapa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6689C92274D592001042E2 /* ViewControllerMapa.swift */; };
 		3F6689CC2274D5BB001042E2 /* ViewControllerCreateEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6689CB2274D5BB001042E2 /* ViewControllerCreateEvent.swift */; };
 		3FB4287722790987002C1327 /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB4287522790987002C1327 /* ProfileTableViewCell.swift */; };
@@ -30,6 +32,8 @@
 		3F240FC422726AF600C16E97 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F240FC722726AF600C16E97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F240FC922726AF600C16E97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F4EF0F4227BB88700F9F0F2 /* ConfigViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigViewController.swift; sourceTree = "<group>"; };
+		3F4EF0F6227BB9E000F9F0F2 /* userInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = userInfo.swift; sourceTree = "<group>"; };
 		3F6689C92274D592001042E2 /* ViewControllerMapa.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerMapa.swift; sourceTree = "<group>"; };
 		3F6689CB2274D5BB001042E2 /* ViewControllerCreateEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerCreateEvent.swift; sourceTree = "<group>"; };
 		3FB4287522790987002C1327 /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
@@ -73,9 +77,11 @@
 				3F240FBD22726AF600C16E97 /* AppDelegate.swift */,
 				3F240FBF22726AF600C16E97 /* ViewController.swift */,
 				3F240FC122726AF600C16E97 /* Main.storyboard */,
+				3F4EF0F4227BB88700F9F0F2 /* ConfigViewController.swift */,
 				3FB4287522790987002C1327 /* ProfileTableViewCell.swift */,
 				3FB4287622790987002C1327 /* ProfileTableViewController.swift */,
 				3FE3A2CB2274E443008A7995 /* events.swift */,
+				3F4EF0F6227BB9E000F9F0F2 /* userInfo.swift */,
 				3FE3A2CC2274E443008A7995 /* EventScreenViewController.swift */,
 				3FE3A2CD2274E443008A7995 /* FeedTableViewCell.swift */,
 				3FE3A2CE2274E443008A7995 /* FeedTableViewController.swift */,
@@ -160,9 +166,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F4EF0F7227BB9E000F9F0F2 /* userInfo.swift in Sources */,
 				3F6689CA2274D592001042E2 /* ViewControllerMapa.swift in Sources */,
 				3FE3A2D02274E443008A7995 /* EventScreenViewController.swift in Sources */,
 				3FE3A2D12274E443008A7995 /* FeedTableViewCell.swift in Sources */,
+				3F4EF0F5227BB88700F9F0F2 /* ConfigViewController.swift in Sources */,
 				3FB4287722790987002C1327 /* ProfileTableViewCell.swift in Sources */,
 				3FE3A2D22274E443008A7995 /* FeedTableViewController.swift in Sources */,
 				3F240FC022726AF600C16E97 /* ViewController.swift in Sources */,

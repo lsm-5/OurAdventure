@@ -41,6 +41,10 @@ class EventDAO{
     
 }
 
+extension NSNotification.Name {
+    static let didCreateEvent = NSNotification.Name(rawValue: "didCreateEvent")
+}
+
 class userEventDAO{
     static func getEvent() -> [Event]{
         let events: [Event] = [
@@ -50,4 +54,7 @@ class userEventDAO{
     }
     var events: [Event] = userEventDAO.getEvent()
     
+    
+    
 }
+

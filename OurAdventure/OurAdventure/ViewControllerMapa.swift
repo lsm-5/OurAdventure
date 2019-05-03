@@ -21,65 +21,68 @@
     
     var locationManager = CLLocationManager()
     var userLocation = CLLocation()
-    
+    var events = EventDAO.getEvent()
     //botao dentro do pin
     let btn = UIButton(type: .detailDisclosure)
     
-    var titulo = "Limpar a praia"
-    var location = "Av. Boa Viagem, Boa Viagem"
-    var subtitulo = "PRAIA LIMPA JOGANDO O LIXO NO SAQUINHO"
+    
+    var location = ""
     
     @IBAction func AtualizarButton(_ sender: Any) {
         
-        //ignorando usuario enquanto carrega
-        UIApplication.shared.beginIgnoringInteractionEvents()
         
-        
-        //adicionando animacao de carregamento
-        let activityIndicator = UIActivityIndicatorView()
-        activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
-        activityIndicator.center = self.view.center
-        activityIndicator.hidesWhenStopped = true
-        activityIndicator.startAnimating()
-        
-        
-        //pegando o input e convertendo em query
-        let searchRequest = MKLocalSearchRequest()
-        searchRequest.naturalLanguageQuery = location
-        
-        
-        let activeSearch = MKLocalSearch(request: searchRequest)
-        activeSearch.start{     (response,error) in
+        for events in events{
+            print(events.name)
+            location = events.location
+            //ignorando usuario enquanto carrega
+            UIApplication.shared.beginIgnoringInteractionEvents()
             
-            //deixando o usuario mexendo novamente
-            activityIndicator.stopAnimating()
-            UIApplication.shared.endIgnoringInteractionEvents()
             
-            if response == nil{
-                print("ERROR")
-            }else{
-                //getting data
-                let latitude = response?.boundingRegion.center.latitude
-                let longitude = response?.boundingRegion.center.longitude
+            //adicionando animacao de carregamento
+            let activityIndicator = UIActivityIndicatorView()
+            activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
+            activityIndicator.center = self.view.center
+            activityIndicator.hidesWhenStopped = true
+            activityIndicator.startAnimating()
+            
+            
+            //pegando o input e convertendo em query
+            let searchRequest = MKLocalSearchRequest()
+            searchRequest.naturalLanguageQuery = location
+            
+            
+            let activeSearch = MKLocalSearch(request: searchRequest)
+            activeSearch.start{     (response,error) in
                 
-                //create annotation
-                let annotation = MyPointAnnotation()
-                annotation.title = self.titulo
-                annotation.subtitle = self.subtitulo
-                annotation.coordinate = CLLocationCoordinate2DMake(latitude!, longitude!)
-                self.mapView.addAnnotation(annotation)
+                //deixando o usuario mexendo novamente
+                activityIndicator.stopAnimating()
+                UIApplication.shared.endIgnoringInteractionEvents()
                 
-                
-                //Dando zoom no annotation
-                let coordinate:CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitude!, longitude!)
-                let span = MKCoordinateSpanMake(0.1, 0.1)
-                let region = MKCoordinateRegionMake(coordinate, span)
-                self.mapView.setRegion(region, animated: true)
-                
+                if response == nil{
+                    print("ERROR")
+                }else{
+                    //getting data
+                    let latitude = response?.boundingRegion.center.latitude
+                    let longitude = response?.boundingRegion.center.longitude
+                    
+                    //create annotation
+                    let annotations = MyPointAnnotation()
+                    annotations.title = events.name + " " + events.date
+                    annotations.subtitle = events.description
+                    annotations.coordinate = CLLocationCoordinate2DMake(latitude!, longitude!)
+                    self.mapView.addAnnotation(annotations)
+                    
+                    
+                    //Dando zoom no annotation
+                    let coordinate:CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitude!, longitude!)
+                    let span = MKCoordinateSpanMake(0.1, 0.1)
+                    let region = MKCoordinateRegionMake(coordinate, span)
+                    self.mapView.setRegion(region, animated: true)
+                    
+                }
             }
+            
         }
-        
-        
         
     }
     
@@ -95,7 +98,37 @@
             let viewController = storyboard?.instantiateViewController(withIdentifier: "Evento")
             self.navigationController?.pushViewController(viewController!, animated: true)
             
-            performSegue(withIdentifier: "Evento", sender: self)
+            //passando o evento pra tela de descricao de evento
+            var nome = ""
+            var localizacao = ""
+            var data = ""
+            var tempo = ""
+            var descricao = ""
+            for events in events{
+                print(events.name)
+                if(events.name + " " + events.date == (annotationView.annotation?.title)!){
+                    nome = events.name
+                    localizacao = events.location
+                    data = events.date
+                    tempo = events.time
+                    descricao = events.description
+                }
+            }
+            
+            
+            let  envia = storyboard?.instantiateViewController(withIdentifier: "Evento") as! EventScreenViewController
+            envia.recebeNome = nome
+            envia.recebeTempo = tempo
+            envia.recebeLocal = localizacao
+            envia.recebeTempo = tempo
+            envia.recebeDescricao = descricao
+            envia.recebeData = data
+            present(envia, animated: true, completion: nil)
+            
+            
+            
+            
+            
         }
     }
     
@@ -127,6 +160,7 @@
             btn.setImage(annotation.imagem, for: UIControlState())
             annotationView?.canShowCallout = true
             annotationView?.rightCalloutAccessoryView = btn
+            
             
         }
         
